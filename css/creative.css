@@ -318,3 +318,7 @@ header.masthead p {
   background-size: cover;
   background-position: center center;
 }
+
+#eventForm {
+   margin: 0 80px;
+}
