@@ -322,3 +322,17 @@ header.masthead p {
 #eventForm {
    margin: 0 80px;
 }
+
+#greeting {
+    font-size: 82px;
+}
+
+
+/************************   MEDIA QUERIES *********************/
+
+@media(max-width: 450px) {
+    #greeting {
+        font-size: 28px;
+}
+}
+
