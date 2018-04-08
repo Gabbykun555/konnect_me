@@ -41,7 +41,7 @@
               <a class="nav-link js-scroll-trigger" href="#portfolio">SIGNUP</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">LOGIN</a>
+              <a class="nav-link js-scroll-trigger" href="feed.html">LOGIN</a>
             </li>
           </ul>
         </div>
@@ -53,21 +53,25 @@
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
             <h1 style="margin-top: 50px; font-size: 60px; margin-bottom: -15px;" class="section-heading text-white">Create an Event</h1> 
+            <br>
+            <br>
+            <p style="color: white; text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dicta recusandae voluptatum soluta pariatur doloremque nam.</p>
           </div>
         </div>
       </div>
     </section>
     
     <section>
-        <p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dicta recusandae voluptatum soluta pariatur doloremque nam.</p>
-        
+        <br>
         <div id="eventForm">
+            <h2 style="color: blue; text-align:  center;">Event Scheduler</h2>
+            <br>
             <form  class="form-group" action="post">
-                <input class="form-control" type="text"><br>
-                <input class="form-control" type="text"><br>
-                <input class="form-control" type=""><br>
-                <input class="form-control" type="text"><br>
-                <input class="form-control" type="submit"><br>
+                <input class="form-control" type="text" placeholder="Title of event..."><br>
+                <input class="form-control" type="date"><br>
+                <input class="form-control" type="text" placeholder="Add a Location..." onFocus="geolocate()"><br>
+                <textarea class="form-control" placeholder="Add a description for the event..."></textarea><br>
+                <input class="form-control" type="submit" value="GO!"><br>
             </form>
         </div>
     </section>
@@ -83,6 +87,76 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/creative.min.js"></script>
+    
+    <script>
+      // This example displays an address form, using the autocomplete feature
+      // of the Google Places API to help users fill in the information.
+
+      // This example requires the Places library. Include the libraries=places
+      // parameter when you first load the API. For example:
+      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+      var placeSearch, autocomplete;
+      var componentForm = {
+        street_number: 'short_name',
+        route: 'long_name',
+        locality: 'long_name',
+        administrative_area_level_1: 'short_name',
+        country: 'long_name',
+        postal_code: 'short_name'
+      };
+
+      function initAutocomplete() {
+        // Create the autocomplete object, restricting the search to geographical
+        // location types.
+        autocomplete = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+            {types: ['geocode']});
+
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+        autocomplete.addListener('place_changed', fillInAddress);
+      }
+
+      function fillInAddress() {
+        // Get the place details from the autocomplete object.
+        var place = autocomplete.getPlace();
+
+        for (var component in componentForm) {
+          document.getElementById(component).value = '';
+          document.getElementById(component).disabled = false;
+        }
+
+        // Get each component of the address from the place details
+        // and fill the corresponding field on the form.
+        for (var i = 0; i < place.address_components.length; i++) {
+          var addressType = place.address_components[i].types[0];
+          if (componentForm[addressType]) {
+            var val = place.address_components[i][componentForm[addressType]];
+            document.getElementById(addressType).value = val;
+          }
+        }
+      }
+
+      // Bias the autocomplete object to the user's geographical location,
+      // as supplied by the browser's 'navigator.geolocation' object.
+      function geolocate() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var geolocation = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+            var circle = new google.maps.Circle({
+              center: geolocation,
+              radius: position.coords.accuracy
+            });
+            autocomplete.setBounds(circle.getBounds());
+          });
+        }
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYj4w9jVN0wvBJRaOmr6Q4Ic-uSVKe-8c&libraries=places&callback=initAutocomplete" async defer></script>
 
   </body>
 

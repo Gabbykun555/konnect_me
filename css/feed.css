@@ -1,0 +1,477 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat";
+    background-color: gainsboro;
+    overflow-x: hidden;
+}
+
+#section1 {
+    width: 20%;
+    height: 100%;
+    background-color: navy;
+    float: left;
+    background-attachment: fixed;
+}
+
+#section2 {
+    width: 100%;
+}
+
+/*
+#modal {
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+    text-align: center;
+    z-index: 2;
+}
+*/
+
+#user-bar {
+    width: 100%;
+    height: 40px;
+    background-color: white;
+}
+
+#logout {
+    width: 100%;
+}
+
+#logout ul {
+    list-style-type: none;
+    float: right;
+    padding: 10px 20px 0 0;
+}
+
+#logout ul li {
+    color: navy;
+    display: inline;
+    padding: 10px;
+}
+
+
+#section3 {
+    width: 100%;
+}
+
+
+#navigation {
+    width: 100%;
+    height: 100px;
+    background-color: lightskyblue;
+    padding: 30px 0 0 0;
+}
+
+#navigation ul {
+    text-align: center; 
+    padding: 10px 0 0 0;
+}
+
+#navigation ul li {
+    color: navy;
+    display: inline;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    padding: 40px 25px 35px 20px;
+}
+
+#navigation ul li:hover {
+    background-color: skyblue;
+}
+
+.fa-bars {
+    display: none;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 30px;
+    font-size: 30px;
+}
+
+#navigation #logo a {
+    font-size: 1.7em;
+    color: navy;
+    text-decoration: none; 
+}
+
+#logo {
+    padding: 0 0 0 50px;
+}
+
+/*
+.active li {
+    background-color:  #3498db;
+}
+
+.active li:hover {
+    background-color: ;
+}
+
+*/
+
+input {
+    float: right;
+    display: inline-block;
+    margin: 0 50px 0 0; 
+}
+
+input[type=search] {
+    padding-left: 25px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+
+#search-bar .fa {
+    color: dimgray;
+    position: relative;
+    left: 155px;
+    top: 7px;
+}
+
+#side-menu {
+    width: 25%;
+    height: 100%;
+    background-color: navy;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+#edit {
+    
+}
+
+#user-info {
+    padding: 40% 0 0 0;
+}
+
+#user-info, #links {
+    text-align: center;
+}
+
+#user-info img {
+    width: 150px;
+    color: white;
+    border-radius: 50%;
+}
+
+#user-info a {
+    font-size: 1.2em;
+    padding: 16px 30px;
+    border-radius: 3em;
+    color: white;
+    background-color: gainsboro;
+}
+
+#user-info a:hover {
+    background-color: silver;
+}
+
+#user-info ul li {
+    color: lightskyblue;
+}
+
+h4 {
+    color: lightskyblue;
+    font-size: 1.4em;
+    padding: 20px 0 50px 0;
+}
+
+#links ul {
+    padding: 50px 0 0 0;
+    list-style-type: none;
+}
+
+#links ul a {
+    color: lightskyblue;
+}
+
+#links ul a:hover {
+    color: cornflowerblue;
+}
+
+#links ul li {
+    text-decoration: none;
+    padding: 20px 0;
+    font-size: 1.3em;
+}
+
+#links .fa {
+    padding: 0 10px 0 0;
+}
+
+#section4 {
+    width: 100%;
+    padding: 5% 0 0 5%;
+    float: left;
+}
+
+#ui {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+span {
+    background-color: red;
+    position: relative;
+    bottom: 3px;
+    left: 4px;
+    border-radius: 3em;
+}
+
+#new-post textarea #post{
+    width: 100%;
+    padding-bottom: 30px;
+    margin-bottom: 10px;
+}
+
+#post-title {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 40px;
+}
+
+.card {
+    margin-bottom: 30px;
+    border-radius: 0.5em;
+}
+
+.card-header {
+    color: white;
+    background-color: #F05F40;
+}
+
+.card-block {
+    padding: 10px 15px;
+}
+
+#new-post ul{
+    list-style-type: none;
+}
+
+#new-post ul li{
+    display: inline;
+    padding: 0 5px;
+}
+
+.post-links a {
+    color: gray;
+    font-size: 45px;
+    position: relative;
+    top: 12px;
+}
+
+.card-img-top {
+    padding: 15px;
+}
+
+.card-title, .card-text {
+    text-align: center;
+}
+
+.react ul {
+    display: inline;
+    list-style-type: none;
+}
+
+.react ul li {
+    display: inline;
+    color: lightskyblue;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.react p{
+    display: inline;
+    float: right;
+}
+
+
+
+#section5 {
+    display: inline-block;
+    width: 28%;
+    float: right;
+    padding: 5% 5% 0 0;
+}
+
+
+.thumbnails img {
+    width: 70px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 0 20px 0;
+}
+
+.thumbnails h3 {
+    margin-top: 10px;
+}
+
+#recommendations .thumbnails .fa {
+    color: lightskyblue;
+    font-size: 40px;
+    padding: 0 0 0 5px;
+}
+
+
+#ad .card-img-top {
+    padding: 0;
+}
+
+#ad a {
+    color: black;
+}
+
+hr {
+    text-align: center;
+}
+
+
+
+/***************************************************************  MEDIA QUERIES ***************************************************************/
+
+
+@media(max-width: 1700px) {
+    #navigation ul li {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
+
+
+@media(max-width: 800px) {
+    #user-info img {
+        width: 100px;
+    }
+    
+    #user-info h4 {
+        font-size: 1em;
+    }
+    
+    #user-info a {
+        font-size: 0.9em;
+    }
+    
+    #links ul li{
+        font-size: 1em;
+    }
+    
+    #search-bar {
+        display: none;
+    }
+    
+    #navigation {
+        padding: 10px 0 0 0;
+    }
+    
+    #logo {
+        text-align: center;
+    }
+    
+    #navigation ul li {
+        font-size: 0.9em;
+    }
+}
+
+
+
+@media(max-width: 700px) {
+    #section1, input {
+        display: none;
+    }
+    
+    #ui {
+        width: 100%;
+    }
+    
+    #section4 {
+        width: 100%;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+    
+    #section5 {
+        width: 95%;
+        text-align: center;
+    }
+    
+    #logo {
+        text-align: center; 
+    }
+    
+    #navigation {
+        padding: 15px 0 0 0;
+    }
+    
+    #navigation ul li {
+        font-size: 1em;
+    }
+    
+    #search-bar, #search-bar .fa {
+        display: none;
+    }
+    
+    .thumbnails img {
+        width: 100px;
+        height: 80px;
+        margin: 5px 0;
+    }
+    
+    .post-links a {
+        color: gray;
+        font-size: 35px;
+        position: relative;
+        top: 12px;
+}
+    
+
+}
+
+@media(max-width: 500px) {
+    #navigation ul {
+        display: none;
+    }
+    
+    .fa-bars {
+        display: inline;
+        float: right;
+    }
+    
+    #logo {
+        padding: 15px 0 0 0;
+        text-align: center;
+    }
+    
+    .post-links a {
+        color: gray;
+        font-size: 30px;
+        position: relative;
+        top: 12px;
+}
+}
+
+@media(max-width: 450px) {
+    
+}
+
+
+
+
+
+
